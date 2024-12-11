@@ -9,44 +9,45 @@ import { Menu } from 'antd';
 import { Link } from 'react-router-dom';  // Используем Link для навигации
 
 const items = [
+
     {
-        key: '0',
+        key: '2',
+        label: 'Каталог',
+        icon: <MailOutlined />,
+        children: [
+            { key: '7', label: 'Флизелины', path: '/catalog/flizeliny' },
+            { key: '8', label: 'Иглопробивные материалы', path: '/catalog/igloprobivnye' },
+            { key: '9', label: 'Спанбонды', path: '/catalog/spanbondy' },
+            { key: '10', label: 'Ткани', path: '/catalog/tkani' },
+            { key: '11', label: 'Трикотажные Материалы', path: '/catalog/trikotazhnye' },
+        ],
+    },
+    {
+        key: '1',
         icon: <DesktopOutlined />,
         label: 'Главная страница',
         path: '/',
     },
     {
-        key: '1',
-        label: 'Каталог',
-        icon: <MailOutlined />,
-        children: [
-            { key: '6', label: 'Флизелины', path: '/catalog/flizeliny' },
-            { key: '7', label: 'Иглопробивные материалы', path: '/catalog/igloprobivnye' },
-            { key: '8', label: 'Спанбонды', path: '/catalog/spanbondy' },
-            { key: '9', label: 'Ткани', path: '/catalog/tkani' },
-            { key: '10', label: 'Трикотажные Материалы', path: '/catalog/trikotazhnye' },
-        ],
-    },
-    {
-        key: '2',
+        key: '3',
         icon: <DesktopOutlined />,
         label: 'Тенденции моды',
         path: '/trends',
     },
     {
-        key: '3',
+        key: '4',
         icon: <ContainerOutlined />,
         label: 'Новинки в мире моды',
         path: '/new-arrivals',
     },
     {
-        key: '4',
+        key: '5',
         icon: <ContainerOutlined />,
         label: 'Полезная информация',
         path: '/useful-info',
     },
     {
-        key: '5',
+        key: '6',
         icon: <ContainerOutlined />,
         label: 'Подбор аналогов',
         path: '/analog-selection',
@@ -84,7 +85,6 @@ function Nav() {
                 defaultSelectedKeys={['1']}
                 mode="horizontal"
                 theme="dark"
-                inlineCollapsed={collapsed}
                 style={{ justifyContent: 'center' }}
             >
                 {renderMenuItems(items)}  {/* Генерация всех пунктов меню */}

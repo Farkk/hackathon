@@ -10,6 +10,12 @@ import { Link } from 'react-router-dom';  // Используем Link для н
 
 const items = [
     {
+        key: '0',
+        icon: <DesktopOutlined />,
+        label: 'Главная страница',
+        path: '/',
+    },
+    {
         key: '1',
         label: 'Каталог',
         icon: <MailOutlined />,
